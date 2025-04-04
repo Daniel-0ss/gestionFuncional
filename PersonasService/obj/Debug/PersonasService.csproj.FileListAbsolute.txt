@@ -106,3 +106,11 @@ C:\Users\sebastian-marulanda\Desktop\GestionMedica\PersonasService\bin\EntityFra
 C:\Users\sebastian-marulanda\Desktop\GestionMedica\PersonasService\bin\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\sebastian-marulanda\Desktop\GestionMedica\PersonasService\bin\Unity.Abstractions.pdb
 C:\Users\sebastian-marulanda\Desktop\GestionMedica\PersonasService\bin\Unity.Container.pdb
+C:\Users\sebastian-marulanda\Desktop\GestionMedica\PersonasService\bin\MediatR.dll
+C:\Users\sebastian-marulanda\Desktop\GestionMedica\PersonasService\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\sebastian-marulanda\Desktop\GestionMedica\PersonasService\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\sebastian-marulanda\Desktop\GestionMedica\PersonasService\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\sebastian-marulanda\Desktop\GestionMedica\PersonasService\bin\MediatR.xml
+C:\Users\sebastian-marulanda\Desktop\GestionMedica\PersonasService\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\sebastian-marulanda\Desktop\GestionMedica\PersonasService\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\sebastian-marulanda\Desktop\GestionMedica\PersonasService\bin\System.Threading.Tasks.Extensions.xml
