@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using PersonasService.Domain.Entities;
-using PersonasService.Domain.Interfaces;
 using PersonasService.Infrastructure.Data;
 
 namespace PersonasService.Infrastructure.Repositories
@@ -31,7 +30,7 @@ namespace PersonasService.Infrastructure.Repositories
             if (entity == null) return;
 
             entity.Nombre = persona.Nombre;
-            entity.TipoPersona = persona.TipoPersona;
+            entity.TipoPersona = persona.TipoPersona; 
             _context.SaveChanges();
         }
 

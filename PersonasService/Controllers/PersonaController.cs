@@ -36,5 +36,21 @@ namespace PersonasService.Controllers
             var result = await _mediator.Send(command);
             return Ok(result);
         }
+
+        [HttpPut, Route("")]
+        public async Task<IHttpActionResult> Update(UpdatePersonaCommand command)
+        {
+            var result = await _mediator.Send(command);
+            return Ok(result);
+        }
+
+        [HttpDelete, Route("{id}")]
+        public async Task<IHttpActionResult> Delete(int id)
+        {
+            var result = await _mediator.Send(new DeletePersonaCommand { Id = id });
+            return Ok(result);
+        }
+
     }
 }
+

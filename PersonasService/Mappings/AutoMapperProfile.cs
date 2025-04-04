@@ -9,6 +9,7 @@ namespace PersonasService.Mappings
         public AutoMapperProfile()
         {
             CreateMap<Persona, PersonaDto>().ReverseMap();
+            CreateMap<UpdatePersonaCommand, Persona>();
         }
     }
 }

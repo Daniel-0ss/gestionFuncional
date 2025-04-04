@@ -10,7 +10,6 @@ using PersonasService.Application.Commands;
 using PersonasService.Application.Queries;
 using PersonasService.Application.Interfaces;
 using PersonasService.Application.Services;
-using PersonasService.Domain.Interfaces;
 using PersonasService.Infrastructure.Data;
 using PersonasService.Infrastructure.Repositories;
 using PersonasService.Mappings;
@@ -29,7 +28,7 @@ public static class UnityConfig
         // Application & Domain services
         container.RegisterType<IPersonaService, PersonaService>();
         container.RegisterType<IPersonaRepository, PersonaRepository>();
-
+  
         // AutoMapper
         var config = new MapperConfiguration(cfg =>
         {
@@ -44,7 +43,9 @@ public static class UnityConfig
         // Handlers
         container.RegisterType<IRequestHandler<GetAllPersonasQuery, IEnumerable<PersonaDto>>, GetAllPersonasHandler>();
         container.RegisterType<IRequestHandler<CreatePersonaCommand, PersonaDto>, CreatePersonaHandler>();
+        container.RegisterType<IRequestHandler<UpdatePersonaCommand, PersonaDto>, UpdatePersonaHandler>();
         container.RegisterType<IRequestHandler<GetPersonaByIdQuery, PersonaDto>, GetPersonaByIdHandler>();
+        container.RegisterType<IRequestHandler<DeletePersonaCommand, bool>, DeletePersonaHandler>();
 
         // Resolver para Web API
         GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);

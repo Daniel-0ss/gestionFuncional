@@ -2,7 +2,6 @@
 using AutoMapper;
 using PersonasService.Application.Interfaces;
 using PersonasService.Domain.Entities;
-using PersonasService.Domain.Interfaces;
 using PersonasService.Models;
 
 namespace PersonasService.Application.Services

@@ -159,6 +159,9 @@
   <ItemGroup>
     <Compile Include="Application\Commands\CreatePersonaCommand.cs" />
     <Compile Include="Application\Commands\CreatePersonaHandler.cs" />
+    <Compile Include="Application\Commands\DeletePersonaCommand.cs" />
+    <Compile Include="Application\Commands\DeletePersonaHandler.cs" />
+    <Compile Include="Application\Commands\UpdatePersonaHandler.cs" />
     <Compile Include="Application\Interfaces\IPersonaService.cs" />
     <Compile Include="Application\Queries\GetAllPersonasHandler.cs" />
     <Compile Include="Application\Queries\GetAllPersonasQuery.cs" />
@@ -168,6 +171,7 @@
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\PersonaController.cs" />
+    <Compile Include="Application\Commands\UpdatePersonaCommand.cs" />
     <Compile Include="Domain\Entities\Persona.cs" />
     <Compile Include="Domain\Interfaces\IPersonaRepository.cs" />
     <Compile Include="Global.asax.cs">

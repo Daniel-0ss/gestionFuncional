@@ -3,7 +3,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using AutoMapper;
 using MediatR;
-using PersonasService.Domain.Interfaces;
 using PersonasService.Models;
 
 namespace PersonasService.Application.Queries
