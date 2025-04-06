@@ -1,44 +1,56 @@
-﻿using System.Web.Http;
-using PersonasService.Application.Interfaces;
-using PersonasService.Models;
+﻿using System.Threading.Tasks;
+using System.Web.Http;
+using MediatR;
+using PersonasService.Application.Commands;
+using PersonasService.Application.Queries;
 
 namespace PersonasService.Controllers
 {
     [RoutePrefix("api/personas")]
     public class PersonaController : ApiController
     {
-        private readonly IPersonaService _service;
+        private readonly IMediator _mediator;
 
-        public PersonaController(IPersonaService service)
+        public PersonaController(IMediator mediator)
         {
-            _service = service;
+            _mediator = mediator;
         }
 
         [HttpGet, Route("")]
-        public IHttpActionResult Get() => Ok(_service.GetAll());
+        public async Task<IHttpActionResult> GetAll()
+        {
+            var personas = await _mediator.Send(new GetAllPersonasQuery());
+            return Ok(personas);
+        }
 
         [HttpGet, Route("{id}")]
-        public IHttpActionResult GetById(int id) => Ok(_service.GetById(id));
+        public async Task<IHttpActionResult> GetById(int id)
+        {
+            var result = await _mediator.Send(new GetPersonaByIdQuery { Id = id });
+            return Ok(result);
+        }
 
         [HttpPost, Route("")]
-        public IHttpActionResult Create([FromBody] PersonaDto dto)
+        public async Task<IHttpActionResult> Create(CreatePersonaCommand command)
         {
-            _service.Create(dto);
-            return Ok();
+            var result = await _mediator.Send(command);
+            return Ok(result);
         }
 
         [HttpPut, Route("")]
-        public IHttpActionResult Update([FromBody] PersonaDto dto)
+        public async Task<IHttpActionResult> Update(UpdatePersonaCommand command)
         {
-            _service.Update(dto);
-            return Ok();
+            var result = await _mediator.Send(command);
+            return Ok(result);
         }
 
         [HttpDelete, Route("{id}")]
-        public IHttpActionResult Delete(int id)
+        public async Task<IHttpActionResult> Delete(int id)
         {
-            _service.Delete(id);
-            return Ok();
+            var result = await _mediator.Send(new DeletePersonaCommand { Id = id });
+            return Ok(result);
         }
+
     }
 }
+
