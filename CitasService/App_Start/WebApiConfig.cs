@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Http;
+﻿using System.Web.Http;
 
 namespace CitasService
 {
@@ -19,6 +16,9 @@ namespace CitasService
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            // Formateadores JSON por defecto
+            config.Formatters.Remove(config.Formatters.XmlFormatter);
         }
     }
 }
