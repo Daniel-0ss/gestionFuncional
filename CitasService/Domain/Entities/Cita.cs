@@ -9,8 +9,8 @@ namespace CitasService.Domain.Entities
         public string Lugar { get; set; }
 
         // Relación con Persona
-        public Guid PacienteId { get; set; }
-        public Guid MedicoId { get; set; }
+        public int PacienteId { get; set; }
+        public int MedicoId { get; set; }
 
         // Estado: "Pendiente", "En proceso", "Finalizada"
         public string Estado { get; set; }

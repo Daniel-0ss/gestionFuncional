@@ -4,7 +4,7 @@ namespace CitasService.Models
 {
     public class CitaDto
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public DateTime Fecha { get; set; }
         public string Lugar { get; set; }
         public int PacienteId { get; set; }

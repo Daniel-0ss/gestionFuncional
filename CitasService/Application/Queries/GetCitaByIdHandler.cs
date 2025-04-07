@@ -2,8 +2,8 @@
 using System.Threading.Tasks;
 using AutoMapper;
 using MediatR;
-using CitasService.Models;
 using System.Collections.Generic;
+using CitasService.Models;
 
 namespace CitasService.Application.Queries
 {
