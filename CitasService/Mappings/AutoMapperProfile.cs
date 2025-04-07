@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using CitasService.Domain.Entities;
-using CitasService.Models;
 using CitasService.Application.Commands;
+using CitasService.Models;
 
 namespace CitasService.Mappings
 {

@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using System;
+using CitasService.Models;
 
 namespace CitasService.Application.Commands
 {
@@ -8,7 +9,7 @@ namespace CitasService.Application.Commands
         public Guid Id { get; set; }
         public DateTime Fecha { get; set; }
         public string Lugar { get; set; }
-        public Guid PacienteId { get; set; }
-        public Guid MedicoId { get; set; }
+        public int PacienteId { get; set; }
+        public int MedicoId { get; set; }
     }
 }

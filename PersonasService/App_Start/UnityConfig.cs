@@ -10,7 +10,6 @@ using PersonasService.Application.Commands;
 using PersonasService.Application.Queries;
 using PersonasService.Application.Interfaces;
 using PersonasService.Application.Services;
-using PersonasService.Infrastructure.Data;
 using PersonasService.Infrastructure.Repositories;
 using PersonasService.Mappings;
 using PersonasService.Models;

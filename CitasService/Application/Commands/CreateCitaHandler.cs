@@ -3,8 +3,8 @@ using System.Threading.Tasks;
 using AutoMapper;
 using MediatR;
 using CitasService.Domain.Entities;
-using CitasService.Models;
 using System;
+using CitasService.Models;
 
 namespace CitasService.Application.Commands
 {
